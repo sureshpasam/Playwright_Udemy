@@ -19,3 +19,31 @@ console.log(await page.locator("app-card").filter({hasText:'Nokia Edge'}));
     //When we use the getByLabel method, it will automatically find the element based on the label text and perform the action on it. This is particularly useful for form elements like checkboxes, radio buttons, and select dropdowns, where the label provides a clear association with the input element. By using getByLabel, we can write more readable and maintainable tests that closely resemble how users interact with the application.
 
 });
+
+test.only('Section7_calendar', async({page}) => {
+    const monthNumber = "6";
+    const dayNumber = "15";
+    const year ="2027";
+    const expectedList = [monthNumber, dayNumber, year];
+  
+   await page.goto('https://rahulshettyacademy.com/seleniumPractise/#/offers');
+   await page.locator(".react-date-picker__inputGroup").click();
+   await page.locator(".react-calendar__navigation__label").click();
+   await page.locator(".react-calendar__navigation__label").click();
+   await page.getByText(year).click();
+   await page.locator(".react-calendar__year-view__months__month").nth(Number(monthNumber)-1 ).click();
+   await page.locator("//abbr[text()='"+dayNumber+"']").click();
+const inputs = await page.locator(".react-date-picker__inputGroup__input");
+for(let i=0; i<await inputs.count(); i++){
+    const value = await inputs.nth(i).inputValue();
+    console.log(value);
+    expect(value).toBe(expectedList[i]);    
+}
+
+
+   await page.pause();
+
+  
+   
+
+    });

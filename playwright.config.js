@@ -38,7 +38,26 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    //trace: 'on-first-retry',
+    /* Take a screenshot when test fails and retrying. See https://playwright.dev/docs/screenshots */
+    //screenshot: 'only-on-failure',
+    /* Collect video when retrying the failed test. See https://playwright.dev/docs/video-recording */
+    // video: 'retry-with-video',
+     //screenshot: 'on',
+    // video: 'on',
+    trace: 'retain-on-failure',
+    /* Base URL to use in actions like `await page.goto()`. */
+    //baseURL: 'https://rahulshettyacademy.com/angularpractice/',
+    /* Run each test in a new browser context. See https://playwright.dev/docs/api/class-browser#browser-new-context */
+    // contextOptions: {
+    //   ignoreHTTPSErrors: true,
+    // },
+    /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+    //trace: 'on-first-retry',
+    /* Take a screenshot when test fails and retrying. See https://playwright.dev/docs/screenshots */
+    screenshot: 'only-on-failure',
+    /* Collect video when retrying the failed test. See https://playwright.dev/docs/video-recording */
+    //video: 'retry-with-video',
   },
 
   /* Configure projects for major browsers */
