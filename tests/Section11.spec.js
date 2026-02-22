@@ -27,6 +27,14 @@ test('Place the order', async ()=>
  
     const titles  = await page.locator(".card-body b").allTextContents();
     console.log(titles);
+    page.on('request', request => {
+        console.log("Request URL:: "+request.url());
+
+    });
+        page.on('response', response => {
+        console.log("Response URL:: "+response.url());
+        
+    });
   for(let i=0; i<count; i++){ 
     if(await allProducts.nth(i).locator("b").textContent() === productName){
         console.log(await allProducts.nth(i).locator("b").textContent());

@@ -10,6 +10,7 @@ await page.goto('https://rahulshettyacademy.com/client/');
 await Email.fill("sureshpasam94@gmail.com");
 await Password.fill("Chaitu@143");
 await SignInBtn.click();
+
 await page.waitForLoadState('networkidle');
 await page.locator(".card-body b").first().textContent();
 console.log(await page.locator(".card-body b").allTextContents());

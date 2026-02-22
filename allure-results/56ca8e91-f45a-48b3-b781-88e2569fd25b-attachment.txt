@@ -1,0 +1,35 @@
+Promise {
+  <pending>,
+  [Symbol(async_id_symbol)]: 14698,
+  [Symbol(trigger_async_id_symbol)]: 6445,
+  [Symbol(kResourceStore)]: undefined
+}
+Text is :: ADIDAS ORIGINAL$ 11500 View Add To Cart
+Text is :: ZARA COAT 3$ 11500 View Add To Cart
+ZARA COAT 3$ 11500 View Add To Cart
+Product found and added to cart
+Count is :: 2
+Text is ::  British Indian Ocean Territory
+India is selected
+User email is :: sureshpasam94@gmail.com
+ | 699a868aef5a289f8389e5db | 
+7
+[
+  '699a868aef5a289f8389e5dbZARA COAT 3$ 11500Sun Feb 22ViewDelete',
+  '69991752ef5a289f83871b18ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69991732ef5a289f83871ad3ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '699910c8ef5a289f83871311ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69990cffef5a289f83870fbaZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69990c2def5a289f83870f49ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '699874751fe6115f6a99301cZARA COAT 3$ 11500Fri Feb 20ViewDelete'
+]
+7
+[
+  '699874751fe6115f6a99301cZARA COAT 3$ 11500Fri Feb 20ViewDelete',
+  '69990c2def5a289f83870f49ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69990cffef5a289f83870fbaZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '699910c8ef5a289f83871311ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69991732ef5a289f83871ad3ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '69991752ef5a289f83871b18ZARA COAT 3$ 11500Sat Feb 21ViewDelete',
+  '699a868aef5a289f8389e5dbZARA COAT 3$ 11500Sun Feb 22ViewDelete'
+]

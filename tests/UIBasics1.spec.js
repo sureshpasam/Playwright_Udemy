@@ -1,5 +1,7 @@
 const {test, expect} = require('@playwright/test');
 const { promises } = require('node:dns');
+test.describe.configure({mode:'parallel'})
+//test.describe.configure({mode:'serial'})
 test('UIBasics', async({page}) => {
     //PLay wright code wright here
 await page.goto('https://rahulshettyacademy.com/loginpagePractise/');
@@ -72,7 +74,7 @@ console.log((await page.locator(".card-body b").allTextContents()));
 
 });
 
-test.only('dropdowns_NewPageOr window', async({page,browser}) => {
+test('dropdowns_NewPageOr window', async({page,browser}) => {
    const context = await browser.newContext();
    const newpage1= await context.newPage();
     await newpage1.goto('https://rahulshettyacademy.com/loginpagePractise/');

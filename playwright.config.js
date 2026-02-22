@@ -13,8 +13,11 @@ import { defineConfig, devices } from '@playwright/test';
  * @see https://playwright.dev/docs/test-configuration
  */
 export default defineConfig({
-  testDir: './tests', //specify the test directory which contains the test files which we want to execute run
- //Playwright having default timeout of 30 seconds for each test, if we want to change the default timeout then we can use the below code
+  testDir: './tests',
+  //retries :2 ,
+
+  //specify the test directory which contains the test files which we want to execute run
+  //Playwright having default timeout of 30 seconds for each test, if we want to change the default timeout then we can use the below code
   //timeout: 60 * 1000, //1 minute
   /* this option is used to specify the timeout for each assertion, if we want to change the default timeout for assertion then we can use the below code
   expect: {
@@ -24,6 +27,7 @@ export default defineConfig({
 
   /* Run tests in files in parallel */
   fullyParallel: true,
+ // workers:1,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
@@ -32,6 +36,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
+
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -42,8 +47,8 @@ export default defineConfig({
     /* Take a screenshot when test fails and retrying. See https://playwright.dev/docs/screenshots */
     //screenshot: 'only-on-failure',
     /* Collect video when retrying the failed test. See https://playwright.dev/docs/video-recording */
-    // video: 'retry-with-video',
-     //screenshot: 'on',
+     video: 'retry-with-video',
+    //screenshot: 'on',
     // video: 'on',
     trace: 'retain-on-failure',
     /* Base URL to use in actions like `await page.goto()`. */
@@ -66,18 +71,43 @@ export default defineConfig({
       name: 'chromium',
       use: { ...devices['Desktop Chrome'] },
     },
-    */
+    
+   */
     {
       name: 'chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+      use: {
+        ...devices['Desktop Chrome'], channel: 'chrome',
+        
+        //viewport:{width:1470,height:1500} 
+       // screenshot:'only-on-failure',
+        //video:'retain-on-failure',
+        //trace:'retain-on-failure'
+
+      }
+
+        
+      },
+     /*
+            {
+      name: 'firefox',
+      use: { ...devices['iPhone 11'] , channel: 'firefox' },
     },
+    
+  {
+      name: 'Mobile Chrome',
+      use: { ...devices['Pixel 5'] },
+     },
+     */
+
+
+
 /*
     {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
 
-   /* {
+    {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
